@@ -18,6 +18,7 @@ dotenv.config({
 connectDB()  // Call the connectDB function to establish a MongoDB connection
 .then(() => {  // If the database connection is successful, start the server
     // Listen on the provided port or default to 8000 if PORT is not set in the .env file
+    
     app.listen(process.env.PORT || 8000, () => {
         // Log a success message indicating the server is running
         console.log(`Server is running at port : ${process.env.PORT}`);
