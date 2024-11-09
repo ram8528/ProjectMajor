@@ -5,6 +5,8 @@ import dotenv from "dotenv";
 
 // Import the connectDB function from the db/index.js file for database connection
 import connectDB from "./db/index.js";  
+import {app} from './app.js'
+
 
 // ASAP we have to use dotenv in our code
 dotenv.config({
