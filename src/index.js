@@ -10,7 +10,7 @@ import {app} from './app.js'
 
 // ASAP we have to use dotenv in our code
 dotenv.config({
-    path: './env'  // Ensure the environment variables are loaded from the './env' file
+    path: './.env'  // Ensure the environment variables are loaded from the './env' file
 });
 
 // function connectDB(){}

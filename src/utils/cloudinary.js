@@ -1,7 +1,7 @@
 //approach we are following that 1st uploading file via multer then fetch it to local system and then on cloudinary
 
 import { v2 as cloudinary } from 'cloudinary';
-import { fs } from "fs";
+import fs from "fs";
 
 cloudinary.config({ 
     cloud_name: process.env.CLOUDINARY_CLOUD_NAME, 
@@ -18,8 +18,10 @@ const uploadOnCloudinary = async (localFilePath) => {
             resource_type: "auto"
         })
         // file has been uploaded successfully
-        console.log("File is uploaded successfully ",
-        response.url);
+        // console.log("File is uploaded successfully ",
+        // response.url);
+
+        fs.unlinkSync(localFilePath)
         return response;
 
     } catch (error) {
