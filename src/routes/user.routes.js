@@ -7,7 +7,7 @@ import { verifyJWT } from "../middlewares/auth.middleware.js";
 const router = Router()
 
 router.route("/register").post(
-    upload.fields([
+    upload.fields([ // yha fields isliye hai kyuki hm multiple avatars le rhe hai
         {
             name: "avatar",
             maxCount: 1
